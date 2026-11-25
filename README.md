@@ -1,12 +1,19 @@
 # HardwareMD
 
 > Your computer's health check, in plain language.
+> بررسی سلامت کامپیوتر، به زبان ساده.
+
+![demo](docs/demo.gif)
+
+**[English](#english) | [فارسی](#فارسی)**
+
+---
+
+## English
 
 **HardwareMD** is a lightweight, web-based dashboard that reads your computer's hardware sensors (CPU/GPU temperature, fan speed, memory usage, disk health) and tells you what they actually mean — no jargon, no command line, no confusing numbers.
 
-![demo](https://via.placeholder.com/800x400?text=Demo+GIF+Here)
-
-## Why HardwareMD?
+### Why HardwareMD?
 
 Most hardware monitoring tools show you a wall of numbers: 65°C, 1200 RPM, 42% usage. But if you're not a hardware enthusiast, you have no idea whether those numbers are good or bad.
 
@@ -16,7 +23,7 @@ HardwareMD is built for everyone else. It reads the same sensors, but translates
 - ⚠️ **Warning** — something needs attention (e.g., "Your CPU fan is running slower than usual")
 - ❌ **Critical** — take action now (e.g., "Your GPU is overheating")
 
-## Features
+### Features
 
 - 🖥️ **One-click scan** — open the page, click "Scan", get a health report
 - 🌡️ **Real sensor data** — reads CPU/GPU temperature, fan speed, voltages, memory and disk usage
@@ -25,7 +32,13 @@ HardwareMD is built for everyone else. It reads the same sensors, but translates
 - 🔒 **Privacy first** — everything runs locally on your machine; no data is sent anywhere
 - 🎨 **Clean web UI** — no installation, no terminal, just a browser tab
 
-## How it works
+### Screenshots
+
+| Dashboard | Health Report | Before/After |
+|---|---|---|
+| ![dashboard](docs/screenshot-dashboard.png) | ![report](docs/screenshot-report.png) | ![compare](docs/screenshot-compare.png) |
+
+### How it works
 
 1. A small Python backend reads sensor data using [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)'s web server (or `psutil` for basic metrics).
 2. The data is served to a simple HTML/JS frontend.
@@ -33,7 +46,7 @@ HardwareMD is built for everyone else. It reads the same sensors, but translates
 
 > **Note:** Temperature and fan sensors are only available on Windows via LibreHardwareMonitor. Basic metrics (CPU/memory/disk usage) work on Windows, macOS, and Linux via `psutil`.
 
-## Quick start
+### Quick start
 
 ```bash
 # 1. Clone the repo
