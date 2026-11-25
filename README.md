@@ -11,8 +11,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/hardwaremd?style=social)](https://github.com/yourusername/hardwaremd)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/hardwaremd?style=social)](https://github.com/yourusername/hardwaremd)
+[![GitHub stars](https://img.shields.io/github/stars/HtmlService-iran/hardwaremd?style=social)](https://github.com/yourusername/hardwaremd)
+[![GitHub forks](https://img.shields.io/github/forks/HtmlService-iran/hardwaremd?style=social)](https://github.com/yourusername/hardwaremd)
 
 ![demo](docs/demo.gif)
 
