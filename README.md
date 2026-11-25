@@ -1,67 +1,89 @@
-# HardwareMD
+<div align="center">
 
-> Your computer's health check, in plain language.
-> بررسی سلامت کامپیوتر، به زبان ساده.
+# 🩺 HardwareMD
+
+**Your computer's health check, in plain language.**
+**بررسی سلامت کامپیوتر، به زبان ساده.**
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-3.x-black?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
+
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/hardwaremd?style=social)](https://github.com/yourusername/hardwaremd)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/hardwaremd?style=social)](https://github.com/yourusername/hardwaremd)
 
 ![demo](docs/demo.gif)
 
+</div>
+
 ---
 
-## What is HardwareMD? | HardwareMD چیست؟
+## 🎯 What is HardwareMD? | HardwareMD چیست؟
 
 **HardwareMD** is a lightweight, web-based dashboard that reads your computer's hardware sensors (CPU/GPU temperature, fan speed, memory usage, disk health) and tells you what they actually mean — no jargon, no command line, no confusing numbers.
 
 **HardwareMD** یک داشبورد سبک و تحت وب است که سنسورهای سخت‌افزاری کامپیوتر شما (دمای CPU/GPU، سرعت فن، مصرف حافظه، سلامت دیسک) را می‌خواند و به زبان ساده می‌گوید این اعداد چه معنایی دارند — بدون اصطلاحات فنی، بدون خط فرمان، بدون اعداد گیج‌کننده.
 
-### Why? | چرا؟
+## 🖼️ Preview | پیش‌نمایش
 
-Most hardware monitoring tools show a wall of numbers: 65°C, 1200 RPM, 42% usage. If you're not a hardware enthusiast, you have no idea whether those numbers are good or bad. HardwareMD reads the same sensors, but translates them into:
-
-بیشتر ابزارهای نظارت بر سخت‌افزار یک دیوار از اعداد نشان می‌دهند: ۶۵ درجه، ۱۲۰۰ دور فن، ۴۲٪ مصرف. اگر علاقه‌مند به سخت‌افزار نباشید، نمی‌دانید این اعداد خوب هستند یا بد. HardwareMD همان سنسورها را می‌خواند، اما آن‌ها را به این صورت ترجمه می‌کند:
-
-- ✅ **Good / خوب** — everything is normal / همه چیز طبیعی است
-- ⚠️ **Warning / هشدار** — something needs attention / چیزی نیاز به توجه دارد (مثلاً «فن CPU کندتر از حد معمول کار می‌کند»)
-- ❌ **Critical / بحرانی** — take action now / همین حالا اقدام کنید (مثلاً «GPU در حال داغ شدن بیش از حد است»)
-
-## Features | امکانات
-
-- 🖥️ **One-click scan** — open the page, click "Scan", get a health report.
-  **اسکن با یک کلیک** — صفحه را باز کنید، روی «اسکن» کلیک کنید، گزارش سلامت را بگیرید.
-- 🌡️ **Real sensor data** — CPU/GPU temperature, fan speed, voltages, memory and disk usage.
-  **داده‌های واقعی سنسور** — دمای CPU/GPU، سرعت فن، ولتاژ، مصرف حافظه و دیسک.
-- 🗣️ **Plain-language explanations** — every metric comes with a short "what this means" note.
-  **توضیح به زبان ساده** — هر معیار با یک توضیح کوتاه «این یعنی چه» همراه است.
-- 📊 **Before/after comparison** — scan before and after running a game, and see what changed.
-  **مقایسه قبل و بعد** — قبل و بعد از اجرای بازی اسکن کنید و ببینید چه تغییری کرده.
-- 🔒 **Privacy first** — everything runs locally; no data is sent anywhere.
-  **حریم خصوصی اول** — همه چیز محلی اجرا می‌شود؛ هیچ داده‌ای ارسال نمی‌شود.
-- 🎨 **Clean web UI** — no installation, no terminal, just a browser tab.
-  **رابط وب تمیز** — بدون نصب، بدون ترمینال، فقط یک تب مرورگر.
-
-## Screenshots | تصاویر
+<div align="center">
 
 | Dashboard / داشبورد | Health Report / گزارش سلامت | Before/After / مقایسه |
-|---|---|---|
+|:---:|:---:|:---:|
 | ![dashboard](docs/screenshot-dashboard.png) | ![report](docs/screenshot-report.png) | ![compare](docs/screenshot-compare.png) |
 
-## How it works | نحوه کار
+</div>
 
-1. A small Python backend reads sensor data using [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)'s web server (or `psutil` for basic metrics).
-   یک بک‌اند کوچک پایتون داده‌ها را از سرور وب LibreHardwareMonitor (یا `psutil` برای معیارهای پایه) می‌خواند.
-2. The data is served to a simple HTML/JS frontend.
-   داده‌ها به یک فرانت‌اند ساده HTML/JS ارسال می‌شوند.
-3. The frontend displays a color-coded health report with plain-language explanations.
-   فرانت‌اند یک گزارش سلامت رنگی با توضیحات ساده نمایش می‌دهد.
+## ✨ Why HardwareMD? | چرا HardwareMD؟
 
-> **Note:** Temperature and fan sensors are currently Windows-only via LibreHardwareMonitor. Basic metrics (CPU/memory/disk) work on Windows, macOS, and Linux via `psutil`.
-> **توجه:** سنسورهای دما و فن فعلاً فقط روی ویندوز و از طریق LibreHardwareMonitor در دسترس هستند. معیارهای پایه (CPU/حافظه/دیسک) روی ویندوز، مک و لینوکس با `psutil` کار می‌کنند.
+Most tools show a wall of numbers: `65°C`, `1200 RPM`, `42% usage`. If you're not a hardware enthusiast, you have no idea whether those are good or bad.
 
-## Quick start | شروع سریع
+بیشتر ابزارها یک دیوار از اعداد نشان می‌دهند: `۶۵°C`، `۱۲۰۰ RPM`، `۴۲٪ مصرف`. اگر علاقه‌مند به سخت‌افزار نباشید، نمی‌دانید این اعداد خوب هستند یا بد.
 
-```bash
-git clone https://github.com/yourusername/hardwaremd.git
-cd hardwaremd
-pip install -r requirements.txt
-# Windows only (for temperature/fan sensors): enable "Remote Web Server" in LibreHardwareMonitor Options
-python app.py
-# Open http://localhost:5000
+<div align="center">
+
+| ✅ Good / خوب | ⚠️ Warning / هشدار | ❌ Critical / بحرانی |
+|:---:|:---:|:---:|
+| Everything is normal | Something needs attention | Take action now |
+| همه چیز طبیعی است | چیزی نیاز به توجه دارد | همین حالا اقدام کنید |
+
+</div>
+
+## 🚀 Features | امکانات
+
+<table>
+<tr>
+<td width="50%">
+
+**English**
+- 🖥️ **One-click scan** — open the page, click "Scan", get a health report
+- 🌡️ **Real sensor data** — CPU/GPU temp, fan speed, voltages, memory, disk
+- 🗣️ **Plain-language explanations** — every metric has a "what this means" note
+- 📊 **Before/after comparison** — see what changed after running a game
+- 🔒 **Privacy first** — runs locally, no data sent anywhere
+- 🎨 **Clean web UI** — no install, no terminal, just a browser tab
+
+</td>
+<td width="50%">
+
+**فارسی**
+- 🖥️ **اسکن با یک کلیک** — صفحه را باز کن، «اسکن» را بزن، گزارش بگیر
+- 🌡️ **داده واقعی سنسور** — دمای CPU/GPU، سرعت فن، ولتاژ، حافظه، دیسک
+- 🗣️ **توضیح ساده** — هر معیار یک توضیح «یعنی چه» دارد
+- 📊 **مقایسه قبل/بعد** — ببین بعد از بازی چه تغییری کرده
+- 🔒 **حریم خصوصی** — محلی اجرا می‌شود، داده‌ای ارسال نمی‌شود
+- 🎨 **رابط تمیز** — بدون نصب، بدون ترمینال، فقط یک تب مرورگر
+
+</td>
+</tr>
+</table>
+
+## ⚙️ How it works | نحوه کار
+
+```mermaid
+flowchart LR
+    A[LibreHardwareMonitor<br/>or psutil] -->|sensor data| B[Python Backend<br/>Flask]
+    B -->|JSON API| C[HTML/JS Frontend]
+    C -->|color-coded report| D[🖥️ Browser]
